@@ -83,9 +83,7 @@ function handleProductChange(product, isIncrease){
    // const productInput = document.getElementById(product + '-count');
    //    const productCount = parseInt(productInput.value);
    const productCount = getInputvalue(product);
-   
-     
-      //const caseNewCount = caseCount -1; 
+ 
       let productNewCount = productCount;
       if(isIncrease == true){
          productNewCount = productCount + 1;
@@ -94,7 +92,7 @@ function handleProductChange(product, isIncrease){
          productNewCount = productCount - 1;
       }
       document.getElementById(product + '-count').value =productNewCount;
-      // const caseTotal = productNewCount * 59;
+
       let productTotal = 0;
       if(product == 'phone'){
          productTotal = productNewCount * 1219;
@@ -106,20 +104,15 @@ function handleProductChange(product, isIncrease){
       calculateTotal()
   }
   function calculateTotal(){
-   //   const phoneInput = document.getElementById('phone-count')
-   //   const phoneCount = parseInt(phoneInput.value);
    
      const phoneCount = getInputvalue('phone')
 
-
-   //   const caseInput = document.getElementById('case-count')
-   //   const caseCount = parseInt(caseInput.value);
-   const caseCount = getInputvalue('case');
+     const caseCount = getInputvalue('case');
 
      const totalPrice = phoneCount * 1219 + caseCount * 59;
      document.getElementById('total-price').innerText ='$' +totalPrice;
 
-     const tax =Math.round(totalPrice * 0.1);
+     const tax = Math.round(totalPrice * 0.1);
      document.getElementById('tax-amount').innerText = '$' + tax;
 
      const grandTotal = totalPrice + tax;
@@ -133,17 +126,12 @@ function handleProductChange(product, isIncrease){
      return productCount;
   }
 
-
-
-
-
 // second part=============================second system
   
 //   function handleProductChange(product, isIncrease){
 //    const productInput = document.getElementById(product + '-count');
 //       const productCount = parseInt(productInput.value);
      
-//       //const caseNewCount = caseCount -1; 
 //       let productNewCount = productCount;
 //       if(isIncrease == true){
 //          productNewCount = productCount + 1;
@@ -152,7 +140,7 @@ function handleProductChange(product, isIncrease){
 //          productNewCount = productCount - 1;
 //       }
 //       productInput.value =productNewCount;
-//       // const caseTotal = productNewCount * 59;
+
 //       let productTotal = 0;
 //       if(product == 'phone'){
 //          productTotal = productNewCount * 1219;
@@ -168,8 +156,7 @@ function handleProductChange(product, isIncrease){
 //   function handlePhoneChange(isIncrease){
 //    const phoneInput = document.getElementById('phone-count');
 //    const phoneCount = parseInt(phoneInput.value);
-     
-//       //const caseNewCount = caseCount -1; 
+      
 //       let phoneNewCount = phoneCount;
 //       if(isIncrease == true){
 //          phoneNewCount = phoneCount + 1;
@@ -177,7 +164,7 @@ function handleProductChange(product, isIncrease){
 //       if(isIncrease == false && phoneCount > 0){
 //          phoneNewCount = phoneCount - 1;
 //       }
-//       phoneInput.value =phoneNewCount;
+//       phoneInput.value = phoneNewCount;
 //       const phoneTotal = phoneNewCount * 1219;
 //       document.getElementById('phone-total').innerText = '$' + phoneTotal;
 //   }
@@ -185,7 +172,6 @@ function handleProductChange(product, isIncrease){
 //    const caseInput = document.getElementById('case-count');
 //       const caseCount = parseInt(caseInput.value);
      
-//       //const caseNewCount = caseCount -1; 
 //       let caseNewCount = caseCount;
 //       if(isIncrease == true){
 //          caseNewCount = caseCount + 1;
@@ -200,13 +186,12 @@ function handleProductChange(product, isIncrease){
 
 
 
-//Frist part 3 systen======================================
+//Frist part third systen======================================
 
 //   function handleProductChange(isIncrease){
 //    const caseInput = document.getElementById('case-count');
 //       const caseCount = parseInt(caseInput.value);
-     
-//       //const caseNewCount = caseCount -1; 
+      
 //       let caseNewCount = caseCount;
 //       if(isIncrease == true){
 //          caseNewCount = caseCount + 1;
@@ -233,7 +218,6 @@ function handleProductChange(product, isIncrease){
 //    const caseInput = document.getElementById('case-count');
 //       const caseCount = parseInt(caseInput.value);
      
-//       //const caseNewCount = caseCount -1; 
 //       let caseNewCount = caseCount;
 //       if(isIncrease == true){
 //          caseNewCount = caseCount + 1;
